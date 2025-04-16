@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Click Color Change</title>
+</head>
+<body>
+
+<button onclick="changeColor(this)">Button 1</button>
+<button onclick="changeColor(this)">Button 2</button>
+<button onclick="changeColor(this)">Button 3</button>
+
+<script>
+  function changeColor(button) {
+    button.style.backgroundColor = getRandomColor();
+  }
+
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+</script>
+
+</body>
+</html>
