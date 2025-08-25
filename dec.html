@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Travel Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f8fafc, #fff);
+      margin: 0;
+      padding: 20px;
+      color: #1e293b;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: 28px;
+      margin: 0;
+    }
+    .header p {
+      font-size: 14px;
+      color: #64748b;
+    }
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      background: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: #f1f5f9; }
+    .btn.primary { background: #2563eb; color: white; border: none; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 20px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 14px;
+      color: #64748b;
+    }
+    .card p {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 5px 0 0;
+    }
+    .table-section {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 20px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+    th {
+      color: #64748b;
+      font-weight: normal;
+    }
+    .progress {
+      background: #e2e8f0;
+      border-radius: 6px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      background: #2563eb;
+      height: 100%;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .placeholder {
+      height: 250px;
+      background: repeating-linear-gradient(
+        45deg,
+        #f1f5f9,
+        #f1f5f9 10px,
+        #e2e8f0 10px,
+        #e2e8f0 20px
+      );
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #94a3b8;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>Bus Travel Dashboard</h1>
+      <p>Monitor routes, occupancy, revenue & trips</p>
+    </div>
+    <div class="header-buttons">
+      <button class="btn">Export</button>
+      <button class="btn primary">New Trip</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="card"><h3>Active Trips</h3><p>5</p></div>
+    <div class="card"><h3>Seats Booked</h3><p>150</p></div>
+    <div class="card"><h3>Avg. Occupancy</h3><p>82%</p></div>
+    <div class="card"><h3>Est. Revenue</h3><p>৳ 3,50,000</p></div>
+  </div>
+
+  <!-- Upcoming Trips -->
+  <div class="table-section">
+    <h2 style="margin:0 0 15px;font-size:16px;">Upcoming Trips</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Trip</th>
+          <th>Route</th>
+          <th>Dep</th>
+          <th>Arr</th>
+          <th>Occupancy</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TR-9001</td>
+          <td>Dhaka → Chittagong</td>
+          <td>25 Aug, 08:00</td>
+          <td>25 Aug, 13:00</td>
+          <td>
+            91%
+            <div class="progress"><div class="progress-bar" style="width:91%"></div></div>
+          </td>
+          <td>৳ 1200</td>
+        </tr>
+        <tr>
+          <td>TR-9002</td>
+          <td>Dhaka → Sylhet</td>
+          <td>26 Aug, 07:30</td>
+          <td>26 Aug, 12:00</td>
+          <td>
+            75%
+            <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+          </td>
+          <td>৳ 1100</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Chart/Map Placeholders -->
+  <div class="grid-2">
+    <div class="placeholder">[ Revenue & Tickets Chart ]</div>
+    <div class="placeholder">[ Daily Occupancy Chart ]</div>
+  </div>
+  <div class="grid-2" style="margin-top:20px;">
+    <div class="placeholder">[ Sales Channel Mix ]</div>
+    <div class="placeholder">[ Live Map ]</div>
+  </div>
+
+  <footer>© 2025 NextHire Transit · Demo Dashboard UI</footer>
+</body>
+</html>

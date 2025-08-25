@@ -1,0 +1,54 @@
+<!-- Travel Gallery Section -->
+<div class="gallery-section" id="gallery">
+  <h2>🚌 Our Travel Moments</h2>
+  <p>বাস ভ্রমণের কিছু সুন্দর মুহূর্ত</p>
+
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 1">
+    <img src="https://images.unsplash.com/photo-1533106418989-88406c7cc8c5?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 2">
+    <img src="https://images.unsplash.com/photo-1473976345543-9ffc928e648d?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 3">
+    <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 4">
+    <img src="https://images.unsplash.com/photo-1529070538774-7d8bfa9cc6f1?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 5">
+    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 6">
+    <img src="https://images.unsplash.com/photo-1529070538774-5a5a3f04bbf5?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 7">
+    <img src="https://images.unsplash.com/photo-1470938017644-581bd9737a31?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 8">
+    <img src="https://images.unsplash.com/photo-1531874826619-80657417e1a2?auto=format&fit=crop&w=600&q=60" alt="Bus Travel 9">
+  </div>
+</div>
+
+<style>
+  .gallery-section {
+    background: #f8fafc;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 40px;
+  }
+  .gallery-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1e293b;
+  }
+  .gallery-section p {
+    color: #475569;
+    margin-bottom: 25px;
+    font-size: 15px;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
+  }
+  .gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+</style>
